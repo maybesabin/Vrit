@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+@font-face {
+    font-family: "PrimaryFont";
+    src: url('../src/fonts/oddlini-extra-black.ttf') format('truetype');
+}
+
+:root {
+    --primary-green: #1da077;
+    --primary-red: #c33241;
+}
+
+@keyframes float1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.parent:hover .float-animation1 {
+    animation: float1 2.5s ease-in-out infinite;
+}
+
+.parent:hover .float-animation2 {
+    animation: float2 2.5s ease-in-out infinite;
+}
